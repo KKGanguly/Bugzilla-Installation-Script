@@ -1,10 +1,10 @@
-drop database bugzilladb;
-drop database bugs;
-drop user bugs;
-create database bugzilladb;
+drop database IF exists bugzilladb;
+drop database if exists bugs;
+GRANT USAGE ON *.* TO 'bugzillauser'@'localhost' IDENTIFIED BY 'iit123';
+GRANT USAGE ON *.* TO 'bugs'@'localhost' IDENTIFIED BY 'iit123';
+drop user bugs@localhost;
 drop user bugzillauser@localhost;
+create database bugzilladb;
 CREATE USER 'bugzillauser'@'localhost' IDENTIFIED BY 'iit123';
-
 GRANT ALL ON bugzilladb.* TO 'bugzillauser'@'localhost';
-
 flush privileges;
