@@ -23,6 +23,7 @@ sudo /usr/bin/perl install-module.pl DateTime::Locale
 sudo /usr/bin/perl install-module.pl Email::Send
 sudo /var/www/html/bugzilla/./checksetup.pl
 sudo rm /var/www/html/bugzilla/localconfig
+cd -
 sudo cp localconfig /var/www/html/bugzilla
 sudo /var/www/html/bugzilla/./checksetup.pl
 sudo chmod +x exec.sh
